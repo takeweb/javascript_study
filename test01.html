@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <input type="button" id="button_0" value="0" />
+        <input type="button" id="button_1" value="1" />
+        <input type="button" id="button_2" value="2" />
+        <input type="button" id="button_3" value="3" />
+        <input type="button" id="button_4" value="4" />
+        <input type="button" id="button_5" value="5" />
+        <input type="button" id="button_6" value="6" />
+        <input type="button" id="button_7" value="7" />
+        <input type="button" id="button_8" value="8" />
+        <input type="button" id="button_9" value="9" />
+        <script>
+            var showAlert = function(i){
+                alert(i);
+            };
+            for (var i = 0; i < 10; i++) {
+                document.getElementById("button_" + i).onclick = function(){
+                    showAlert(i);
+                };
+            }
+        </script>
+    </body>
+</html>
