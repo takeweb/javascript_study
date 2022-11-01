@@ -1,0 +1,10 @@
+.scroll {
+    overflow:auto;
+    width:400px;
+    height:300px;
+}
+.scroll img {
+    height:180px;
+    display:block;
+    margin:1px;
+}
