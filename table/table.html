@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="./table.css">
 </head>
 <body>
+  <input type="month" id="year-month">
   <table border="1" id="TBL">
     <tr>
       <th><a href="javascript:void(0)" style="background-color:pink;">入力フォーム</a></th>
@@ -28,9 +29,45 @@
     </tr>
   </table>
     <br>
-  <div id="Div"><p id="Mbox0">セルをクリックしたらここに書き出します。</p>
-  <p id="Mbox1">インデックス値は '0'から始まります。</p>
+  <div id="Div">
+    <p id="Mbox0">セルをクリックしたらここに書き出します。</p>
+    <p id="Mbox1">インデックス値は '0'から始まります。</p>
   </div>
+  <br>
+  <form>
+    <div class="nativeDatePicker">
+      <label for="month-visit">何月にいらっしゃいますか？</label>
+      <input type="month" id="month-visit" name="month-visit">
+      <span class="validity"></span>
+    </div>
+    <p class="fallbackLabel">何月にいらっしゃいますか？</p>
+    <div class="fallbackDatePicker">
+      <div>
+        <span>
+          <select id="year" name="year">
+          </select>
+          <label for="year">年</label>
+        </span>
+        <span>
+          <select id="month" name="month">
+            <option selected>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+          <label for="month">月</label>
+        </span>
+      </div>
+    </div>
+  </form>
   <br>
   <script src="table.js"></script>
 </body>
