@@ -1,0 +1,13 @@
+#TBL{
+  border-collapse: collapse;
+ }
+#TBL th,td{
+  width : 170px;
+  cursor: hand;
+  padding:5px;
+ }
+#Div{
+  border: 1px ridge fuchsia;
+  width : 380px;
+  padding : 10px;
+}
