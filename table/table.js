@@ -1,5 +1,5 @@
 // THも対象にしたい場合
-// function getCELL() {
+// function getCellInfo() {
 //   const myTbl = document.getElementById('TBL');
 
 //   // trをループ。rowsコレクションで,行位置取得。
@@ -15,7 +15,7 @@
 // }
 
 // TDのみを対象にしたい場合
-function getCELL(){
+function getCellInfo(){
   const myTbl = document.getElementById('TBL');
   let td = myTbl.getElementsByTagName('td'); // タグ 'td'を取得
   for(let i = 0 ;i < td.length; i++){ //tdの数だけループ
@@ -25,21 +25,70 @@ function getCELL(){
 
 function Mclk(Cell) {
   const rowINX = '行位置：' + Cell.parentNode.rowIndex;//Cellの親ノード'tr'の行位置
-  const cellINX = 'セル位置：' + Cell.cellIndex;
-  const cellVal = 'セルの内容：' + Cell.innerHTML;
+  const cellINX = '列位置：' + Cell.cellIndex;
+  // const cellVal = 'セルの内容：' + Cell.innerHTML;
+  const cellVal = Cell.innerHTML;
 
+  document.getElementById("year-month")
   //取得した値の書き出し
-  res=rowINX + '<br/> ' + cellINX + '<br/>' + cellVal;
-  document.getElementById('Mbox0').innerHTML=res;
-  var Ms1=document.getElementById('Mbox1')
-  Ms1.innerText=Cell.innerHTML;
-  Ms1.textContent=Cell.innerHTML;
+  const res = rowINX + '<br>' + cellINX + '<br>' + cellVal.substring(0, 10);
+  document.getElementById('Mbox0').innerHTML = res;
+  let Mb1 = document.getElementById('Mbox1');
+  Mb1.innerText = Cell.innerHTML;
+  Mb1.textContent = Cell.innerHTML;
 }
 
 // try ～ catch 例外処理、エラー処理
 // イベントリスナーaddEventListener,attachEventメソッド
-try{
-  window.addEventListener("load", getCELL, false);
+try {
+  window.addEventListener("load", getCellInfo, false);
 } catch (e) {
-  window.attachEvent("onload", getCELL);
+  window.attachEvent("onload", getCellInfo);
+}
+
+
+// define variables
+const nativePicker = document.querySelector('.nativeDatePicker');
+const fallbackPicker = document.querySelector('.fallbackDatePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
+
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
+
+// Hide fallback initially
+fallbackPicker.style.display = 'none';
+fallbackLabel.style.display = 'none';
+
+// Test whether a new date input falls back to a text input or not
+const test = document.createElement('input');
+
+try {
+  test.type = 'month';
+} catch (e) {
+  console.log(e.description);
+}
+
+// If it does, run the code inside the if () {} block
+if (test.type === 'text') {
+  // Hide the native picker and show the fallback
+  nativePicker.style.display = 'none';
+  fallbackPicker.style.display = 'block';
+  fallbackLabel.style.display = 'block';
+
+  // Populate the years dynamically
+  // (the months are always the same, therefore hardcoded)
+  populateYears();
+}
+
+function populateYears() {
+  // Get the current year as a number
+  const date = new Date();
+  const year = date.getFullYear();
+
+  // Make this year, and the 100 years after it available in the year <select>
+  for (let i = 0; i <= 50; i++) {
+    const option = document.createElement('option');
+    option.textContent = year + i;
+    yearSelect.appendChild(option);
+  }
 }
