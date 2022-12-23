@@ -84,11 +84,26 @@ function populateYears() {
   // Get the current year as a number
   const date = new Date();
   const year = date.getFullYear();
+  const month = date.getMonth();
+  console.log(date);
 
   // Make this year, and the 100 years after it available in the year <select>
-  for (let i = 0; i <= 50; i++) {
+  for (let i = -5; i <= 5; i++) {
     const option = document.createElement('option');
-    option.textContent = year + i;
+    const addYear = year + i;
+    if (addYear == year) {
+      option.selected = true;
+    }
+    option.textContent = addYear;
     yearSelect.appendChild(option);
+  }
+
+  for (let i = 0; i < 12; i++) {
+    const option = document.createElement('option');
+    option.textContent = i + 1;
+    if (i == month) {
+      option.selected = true
+    }
+    monthSelect.appendChild(option)
   }
 }
