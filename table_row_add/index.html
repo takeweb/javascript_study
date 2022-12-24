@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>テーブル クリックしたセルの行位置,列位置,内容の取得</title>
+  <style type="text/css"></style>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <table border="1" id="tbl1">
+    <thead>
+      <tr>
+        <th>列１</th>
+        <th>列２</th>
+        <th>列３</th>
+        <th>削除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>値１</td>
+        <td>値２</td>
+        <td>値３</td>
+        <td><button id="remove" onclick="removeRow(this)">削除</button></td>
+      </tr>
+      <tr>
+        <td>値１</td>
+        <td>値２</td>
+        <td>値３</td>
+        <td><button id="remove" onclick="removeRow(this)">削除</button></td>
+      </tr>
+      <tr>
+        <td>値１</td>
+        <td>値２</td>
+        <td>値３</td>
+        <td><button id="remove" onclick="removeRow(this)">削除</button></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><button id="add" onclick="addRow()">追加</button></td>
+      </tr>
+    </tfoot>
+  </table>
+  <script src="index.js"></script>
+</body>
+</html>
