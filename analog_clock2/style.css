@@ -1,0 +1,72 @@
+body {
+  background: black;
+}
+
+.clock {
+  border-radius: 50%;
+  border: 3px solid white;
+  width: 400px;
+  height: 400px;
+  background: black;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.line-hour {
+  width: 10px;
+  height: 150px;
+  background: #cccccc;
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 5px);
+  transform-origin: bottom;
+}
+
+.line-min {
+  width: 4px;
+  height: 200px;
+  background: #cccccc;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 2px);
+  transform-origin: bottom;
+}
+
+.line-sec {
+  width: 2px;
+  height: 200px;
+  background: #cccccc;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 1px);
+  transform-origin: bottom;
+}
+
+.date-waku {
+  background: black;
+  color: white;
+  position: relative;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.degital-waku {
+  background-color: rgba(255, 255, 255, 0.0);
+  color: white;
+  position: relative;
+  margin-top: 180px;
+  margin-left: 100px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
