@@ -1,13 +1,30 @@
-#TBL{
+#TBL table {
   border-collapse: collapse;
  }
-#TBL th,td{
-  width : 170px;
+
+#TBL th, td {
+  border: 1px solid #b7b7b7;
+  width: 170px;
   cursor: hand;
-  padding:5px;
- }
+  padding: 8px 20px;
+}
+
+td:nth-child(4), td:nth-child(6) {
+  text-align: right;
+}
+
+th {
+  background-color: #2c8daa;
+  color: #fff;
+}
+
+td:hover {
+  cursor: default;
+  background: #ecfafc;
+}
+
 #Div{
   border: 1px ridge fuchsia;
-  width : 380px;
-  padding : 10px;
+  width: 380px;
+  padding: 10px;
 }
