@@ -2,6 +2,13 @@
 <head>
   <title>カレンダー</title>
   <link rel="stylesheet" href="./style.css">
+  <script>
+    window.onload = function(){
+        document.body.addEventListener('contextmenu', function(e) {
+            document.getElementById('contextmenu').style.display="block";
+        });
+    }
+</script>
 </head>
 <body>
   <div class="wrapper">
@@ -16,6 +23,13 @@
 
     <!-- カレンダー -->
     <div id="calendar"></div>
+  </div>
+  <div id="contextmenu">
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
   </div>
   <script src="main.js"></script>
 </body>

@@ -1,0 +1,10 @@
+{
+  "name": "test_date-fns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^2.29.3"
+  }
+}
