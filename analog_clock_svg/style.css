@@ -1,0 +1,12 @@
+#clock {
+  stroke: black;        /* 黒色の線 */
+  stroke-linecap: round;  /* 角は丸角 */
+  fill: #ffe;           /* 背景色はオフホワイト */
+}
+#clock .face { stroke-width: 3; }   /* 時計の外枠 */
+#clock .ticks { stroke-width: 2; }  /* 各時刻を表す線 */
+#clock .hands { stroke-width: 3; }  /* 数字の描画方法 */
+#clock .numbers {
+  font-family: sans-serif; font-size: 10; font-weight: bold;
+  text-anchor: middle; stroke: none; fill: black;
+}
