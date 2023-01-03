@@ -1,0 +1,23 @@
+#conmenu {
+  width: 130px;
+  background-color: #f0f0f0;
+  border:1px solid  #999999;
+  display: none;
+  position: fixed;
+}
+
+#conmenu.on {
+  display: block;
+}
+
+#conmenu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 5px;
+}
+
+#area {
+  width: 400px;
+  height: 200px;
+  background-color: #ddddff;
+}
