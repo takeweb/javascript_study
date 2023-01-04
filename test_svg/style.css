@@ -1,0 +1,9 @@
+body {
+  background-color: black;
+}
+
+#mySvg {
+  /* vertical-align: middle;
+  text-align: center; */
+  margin: 50px;
+}

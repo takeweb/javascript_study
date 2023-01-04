@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>郵便番号検索</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+  <div class="row">
+    <div class="mb-3 col-md-2">
+      <input type="text" id="zipcode" class="form-control zipcode" value="135-0012" placeholder="郵便番号">
+      <p id="error"></p>
+    </div>
+    <div class="col">
+      <button class="btn btn-primary serch-btn" onclick="main();">Get zip code info</button>
+    </div>
+  </div>
+  <table id="result" class="table table-striped">
+    <thead>
+      <tr>
+        <th>郵便番号</th>
+        <th>都道府県コード</th>
+        <th>都道府県名</th>
+        <th>市区町村名</th>
+        <th>町域名</th>
+        <th>都道府県名カナ</th>
+        <th>市区町村名カナ</th>
+        <th>町域名カナ</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/fetch-jsonp@1.1.3/build/fetch-jsonp.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
