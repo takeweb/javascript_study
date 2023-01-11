@@ -8,35 +8,44 @@
   <table border="1" id="tbl1">
     <thead>
       <tr>
+        <th>項番</th>
         <th>列１</th>
         <th>列２</th>
         <th>列３</th>
+        <th>点数</th>
         <th>削除</th>
       </tr>
     </thead>
     <tbody>
       <tr>
+        <td>1</td>
         <td>値１</td>
         <td>値２</td>
         <td>値３</td>
+        <td><input type="text" class="general" value="10" onchange="calcTotal()" class="general"></td>
         <td><button id="remove" onclick="removeRow(this)">削除</button></td>
       </tr>
       <tr>
+        <td>2</td>
         <td>値１</td>
         <td>値２</td>
         <td>値３</td>
+        <td><input type="text" class="general" value="20" onchange="calcTotal()"></td>
         <td><button id="remove" onclick="removeRow(this)">削除</button></td>
       </tr>
       <tr>
+        <td>3</td>
         <td>値１</td>
         <td>値２</td>
         <td>値３</td>
+        <td><input type="text" class="general" value="30" onchange="calcTotal()"></td>
         <td><button id="remove" onclick="removeRow(this)">削除</button></td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
         <td><button id="add" onclick="addRow()">追加</button></td>
+        <td id="total">60</td>
       </tr>
     </tfoot>
   </table>
