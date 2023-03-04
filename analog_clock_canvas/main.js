@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const { context , hankei } =  initialCanvas("analog");
+  const { context , hankei } =  initialCanvas("#analog");
   const cCircle = centerCircle(context);
   const mBan = mojiban(context, hankei);
   const hourHand = new handObj( handDatas.hour, context, hankei);
@@ -23,9 +23,9 @@ window.addEventListener("DOMContentLoaded", () => {
 /*
  *  キャンバスの作成・初期化
  */
-const initialCanvas = id=> {
+const initialCanvas = id => {
   // div要素を取得
-  const viewElm = document.getElementById(id);
+  const viewElm = document.querySelector(id);
 
   // div要素の縦横短い方を取得
   const minSide = Math.min(viewElm.clientWidth , viewElm.clientHeight);
