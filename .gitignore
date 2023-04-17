@@ -1,3 +1,4 @@
 js-code-recipe-master/
 jstdg7/
-**/node_modules
+**/node_modules/**
+location-tech-sample-v1/
