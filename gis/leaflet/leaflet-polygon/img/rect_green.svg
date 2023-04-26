@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2000">
+  <rect
+    width="4096"
+    height="4096"
+    style="fill:green;
+            opacity: 0.5;
+            stroke-width:3;
+            stroke:rgb(0,0,0)" />
+  Sorry, your browser does not support inline SVG.
+</svg>
