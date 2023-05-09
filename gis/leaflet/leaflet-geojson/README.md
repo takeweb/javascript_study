@@ -48,7 +48,7 @@ npm run dev
 ## License
 MIT
 
-Copyright (c) 2018-2022 Yasunori Kirimoto
+Copyright (c) 2018-2022 Taketomo Oishi
 
 <br>
 
@@ -111,10 +111,10 @@ npm run dev
 ## ライセンス
 MIT
 
-Copyright (c) 2018-2022 Yasunori Kirimoto
+Copyright (c) 2018-2022 Taketomo Oishi
 
 <br>
 
 
 npm install axios
-npm install d3.js
+npm install d3

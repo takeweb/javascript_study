@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "keywords": [],
-  "author": "Yasunori Kirimoto",
+  "author": "Taketomo Oishi",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^4.8.2",

@@ -2,10 +2,10 @@
 
 ![README02](img/README02.png)
 
-Start Mapbox GL JS easily.  
-- [Mapbox GL JS v2.10.0](https://www.mapbox.com/mapbox-gl-js/api)  
-- [TypeScript v4.8.2](https://www.typescriptlang.org)  
-- [Vite v3.1.0](https://vitejs.dev)  
+Start Mapbox GL JS easily.
+- [Mapbox GL JS v2.10.0](https://www.mapbox.com/mapbox-gl-js/api)
+- [TypeScript v4.8.2](https://www.typescriptlang.org)
+- [Vite v3.1.0](https://vitejs.dev)
 - node v18.1.0
 - npm v8.8.0
 
@@ -56,7 +56,7 @@ npm run dev
 ## License
 MIT
 
-Copyright (c) 2018-2022 Yasunori Kirimoto
+Copyright (c) 2018-2022 Taketomo Oishi
 
 <br>
 
@@ -73,9 +73,9 @@ Copyright (c) 2018-2022 Yasunori Kirimoto
 ![README02](img/README02.png)
 
 Mapbox GL JSを手軽に始める
-- [MapboxGLJS v2.10.0](https://www.mapbox.com/mapbox-gl-js/api)  
-- [TypeScript v4.8.2](https://www.typescriptlang.org)  
-- [Vite v3.1.0](https://vitejs.dev)  
+- [MapboxGLJS v2.10.0](https://www.mapbox.com/mapbox-gl-js/api)
+- [TypeScript v4.8.2](https://www.typescriptlang.org)
+- [Vite v3.1.0](https://vitejs.dev)
 - node v18.1.0
 - npm v8.8.0
 
@@ -127,6 +127,6 @@ npm run dev
 ## ライセンス
 MIT
 
-Copyright (c) 2018-2022 Yasunori Kirimoto
+Copyright (c) 2018-2022 Taketomo Oishi
 
 <br>

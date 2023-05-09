@@ -2,10 +2,10 @@
 
 ![README02](img/README02.png)
 
-Start Leaflet easily.  
-- [Leaflet v1.9.2](http://leafletjs.com)  
-- [TypeScript v4.8.4](https://www.typescriptlang.org)  
-- [Vite v3.2.1](https://vitejs.dev)  
+Start Leaflet easily.
+- [Leaflet v1.9.2](http://leafletjs.com)
+- [TypeScript v4.8.4](https://www.typescriptlang.org)
+- [Vite v3.2.1](https://vitejs.dev)
 - node v18.1.0
 - npm v8.19.2
 
@@ -48,7 +48,7 @@ npm run dev
 ## License
 MIT
 
-Copyright (c) 2018-2022 Yasunori Kirimoto
+Copyright (c) 2018-2022 Taketomo Oishi
 
 <br>
 
@@ -65,9 +65,9 @@ Copyright (c) 2018-2022 Yasunori Kirimoto
 ![README02](img/README02.png)
 
 Leafletを手軽に始める
-- [Leaflet v1.9.2](http://leafletjs.com)  
-- [TypeScript v4.8.4](https://www.typescriptlang.org)  
-- [Vite v3.2.1](https://vitejs.dev)  
+- [Leaflet v1.9.2](http://leafletjs.com)
+- [TypeScript v4.8.4](https://www.typescriptlang.org)
+- [Vite v3.2.1](https://vitejs.dev)
 - node v18.1.0
 - npm v8.19.2
 
@@ -111,6 +111,6 @@ npm run dev
 ## ライセンス
 MIT
 
-Copyright (c) 2018-2022 Yasunori Kirimoto
+Copyright (c) 2018-2022 Taketomo Oishi
 
 <br>
