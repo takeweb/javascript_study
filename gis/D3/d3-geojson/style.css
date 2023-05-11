@@ -17,12 +17,18 @@
 }
 
 #grid {
+  vertical-align: top;
   display: inline;
 }
 
 #buttons {
-  display: inline;
   vertical-align: top;
+  display: inline;
+}
+
+#colors {
+  vertical-align: top;
+  display: inline;
 }
 
 #rooms {

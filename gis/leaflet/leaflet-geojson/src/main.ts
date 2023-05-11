@@ -2,7 +2,6 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './style.css';
 import axios from 'axios';
-// import d3 from 'd3.js';
 
 let image = {
     url:    'img/rect_green.svg',

@@ -1,11 +1,11 @@
 async function doAsync() {
     return new Promise((resolve) => setTimeout(() => {
-        // console.log('Hello!');
         return resolve('Hello');
     }, 3000));
 }
 
-async function f() {
+async function main() {
+    console.log("START!!");
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => resolve("done!"), 1000)
     });
@@ -15,7 +15,12 @@ async function f() {
     let result2 = await doAsync();
 
     console.log(result); // "done!"
+
+    console.log("中間地点！");
+
     console.log(result2);
+
+    console.log("E N D!!");
 }
 
-f();
+main();

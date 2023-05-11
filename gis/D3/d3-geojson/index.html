@@ -10,16 +10,17 @@
   <body>
     <div id="grid"></div>
     <div id="buttons"></div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 500" width="50" height="500">
       <defs>
-        <linearGradient id="sample" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#f00" />
-          <stop offset="50%" stop-color="#0f0" />
-          <stop offset="100%" stop-color="#00f" />
+        <linearGradient id="hanrei1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="red" />
+          <stop offset="50%" stop-color="yellow" />
+          <stop offset="100%" stop-color="green" />
         </linearGradient>
       </defs>
-      <rect width="60" height="500" fill="url(#sample)" />
+      <rect width="50" height="500" fill="url(#hanrei1)" />
     </svg>
+    <div id="colors"></div>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

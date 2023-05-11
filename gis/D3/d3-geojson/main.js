@@ -1,4 +1,6 @@
 import * as d3 from "d3";
+import * as d3scale from "d3-scale";
+import * as d3legend from "d3-svg-legend";
 
 const grid_width = 1000;
 const grid_height = 300;
@@ -97,3 +99,42 @@ zoomResetButton.on('click', () => {
   scale = 1;
   zoom.scaleTo(d3.selectAll('polygon'), scale);
 });
+
+// // SVG描画エリア
+// const svg3 = d3.select('#grid')
+//               .append('svg')
+//               .attr("class", "map")
+//               .attr('width', grid_width)
+//               .attr('height', grid_height)
+//               .call(zoom);
+// svg3.selectAll().enter()
+//     .append('image')
+//     .attr({
+//       'xlink:href': './img/map.png'
+//     });
+
+// let color = d3.scaleLinear()
+//     .domain([0, 5, 10])
+//     .range(["red", "yellow", "blue"]);
+
+// 凡例エリア
+const svg3 = d3.select('#colors')
+              .append('svg')
+              .attr('width', 50)
+              .attr('height', 500);
+// svg3.call(color);
+
+//チャートを描画する際に使用するスケール(正規化)関数
+var colorScale = d3.scale.linear()
+	.domain([0, 100]).range(["skyblue", "darkblue"]);
+
+//凡例を配置するグループ要素を追加
+var legendView = svg.append("g")
+  .attr("class", "legendQuant")
+  .attr("transform", "translate(20,20)");
+
+  //スケールを元に凡例を生成する
+var legend = d3.legend.color().scale(colorScale);
+
+//凡例を描画する
+legendView.call(legend);

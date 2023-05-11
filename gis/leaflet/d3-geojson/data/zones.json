@@ -1,0 +1,70 @@
+{
+  "type": "ZoonDefine",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "zoneA",
+        "color": "yellow"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[0, 0], [200, 0], [200, 100], [0, 100], [0, 0]]
+          ]
+       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "zoneB",
+        "color": "black"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[200, 0], [400, 0], [400, 100], [200, 100], [200, 0]]
+          ]
+       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "zoneC",
+        "color": "pink"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[400, 0], [600, 0], [600, 100], [400, 100], [400, 0]]
+          ]
+       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "zoneD",
+        "color": "red"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[0, 100], [200, 100], [200, 200], [0, 200], [0, 100]]
+          ]
+       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "zoneE",
+        "color": "blue"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[200, 100], [400, 100], [400, 200], [200, 200], [200, 100]]
+          ]
+       }
+    }
+  ]
+}
