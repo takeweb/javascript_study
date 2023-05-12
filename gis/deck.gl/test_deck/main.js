@@ -1,5 +1,5 @@
-import {Deck} from '@deck.gl/core/typed';
-import {ScatterplotLayer, BitmapLayer} from '@deck.gl/layers/typed';
+import { COORDINATE_SYSTEM, Deck } from '@deck.gl/core/typed';
+import { BitmapLayer, ScatterplotLayer } from '@deck.gl/layers/typed';
 
 const INITIAL_VIEW_STATE = {
   latitude: 37.8,
@@ -52,6 +52,8 @@ const bitmap_layer2 = new BitmapLayer({
 });
 
 const deckgl = new Deck({
+  coordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
+  coordinateOrigin: [0, 0, 0],
   initialViewState: INITIAL_VIEW_STATE,
   controller: true,
   layers: [
