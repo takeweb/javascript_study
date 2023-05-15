@@ -1,0 +1,101 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "label": "末広町"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.77171421051025,
+          35.70295351380033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "label": "御徒町"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.77468609809875,
+          35.70744026750783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "label": "湯島"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.76993322372437,
+          35.70822433446761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "label": "秋葉原"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.77423548698425,
+          35.69866690353522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "label": "⚽"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.76722955703735,
+          35.705192566147424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "label": "🍔"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.77694988250732,
+          35.70179475773796
+        ]
+      }
+    }
+  ]
+}

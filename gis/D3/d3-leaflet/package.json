@@ -1,0 +1,20 @@
+{
+  "name": "d3-leaflet",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "@types/d3": "^7.4.0",
+    "@types/leaflet": "^1.9.2",
+    "d3": "^7.8.4",
+    "leaflet": "^1.9.2"
+  }
+}

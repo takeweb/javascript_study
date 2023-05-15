@@ -1,5 +1,5 @@
 async function doAsync() {
-    return new Promise((resolve) => setTimeout(() => {
+    return await new Promise((resolve) => setTimeout(() => {
         return resolve('Hello');
     }, 3000));
 }

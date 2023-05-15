@@ -58,8 +58,8 @@ const deckgl = new Deck({
   controller: true,
   layers: [
     circle1,
-    // circle2,
-    // bitmap_layer,
+    circle2,
+    bitmap_layer,
     bitmap_layer2
   ]
 });
