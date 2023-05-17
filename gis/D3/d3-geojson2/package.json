@@ -1,5 +1,5 @@
 {
-  "name": "test_deck_map",
+  "name": "d3-geojson",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
     "vite": "^4.3.2"
   },
   "dependencies": {
-    "@deck.gl/core": "^8.9.14",
-    "@deck.gl/layers": "^8.9.14",
-    "luma.gl": "^7.3.2",
-    "mapbox-gl": "^2.14.1"
+    "bootstrap": "^5.2.3",
+    "d3": "^7.8.4",
+    "d3-svg-legend": "^2.25.6"
   }
 }

@@ -28,7 +28,7 @@ const svg = d3.select('#grid')
   .call(zoom);
 
 // loarding geojson
-d3.json("data/rooms.json")
+d3.json("./data/grid.json")
   .then((json) => {
     svg.append("g")
       .selectAll("grid")
@@ -117,24 +117,24 @@ zoomResetButton.on('click', () => {
 //     .domain([0, 5, 10])
 //     .range(["red", "yellow", "blue"]);
 
-// // 凡例エリア
-// const svg3 = d3.select('#colors')
-//   .append('svg')
-//   .attr('width', 50)
-//   .attr('height', 500);
-// // svg3.call(color);
+// 凡例エリア
+const svg3 = d3.select('#colors')
+  .append('svg')
+  .attr('width', 50)
+  .attr('height', 500);
+// svg3.call(color);
 
-// //チャートを描画する際に使用するスケール(正規化)関数
-// var colorScale = d3.scale.linear()
-//   .domain([0, 100]).range(["skyblue", "darkblue"]);
+//チャートを描画する際に使用するスケール(正規化)関数
+var colorScale = d3.scale.linear()
+  .domain([0, 100]).range(["skyblue", "darkblue"]);
 
-// //凡例を配置するグループ要素を追加
-// var legendView = svg.append("g")
-//   .attr("class", "legendQuant")
-//   .attr("transform", "translate(20,20)");
+//凡例を配置するグループ要素を追加
+var legendView = svg.append("g")
+  .attr("class", "legendQuant")
+  .attr("transform", "translate(20,20)");
 
-// //スケールを元に凡例を生成する
-// var legend = d3.legend.color().scale(colorScale);
+//スケールを元に凡例を生成する
+var legend = d3.legend.color().scale(colorScale);
 
-// //凡例を描画する
-// legendView.call(legend);
+//凡例を描画する
+legendView.call(legend);

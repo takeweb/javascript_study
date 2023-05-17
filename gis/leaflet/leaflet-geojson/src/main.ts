@@ -4,8 +4,9 @@ import './style.css';
 import axios from 'axios';
 
 let image = {
-    url:    'img/rect_green.svg',
-    width:  4160,
+    // url: 'img/rect_green.svg',
+    url: 'img/map.svg',
+    width: 4160,
     height: 2112,
 };
 
@@ -51,19 +52,19 @@ L.marker([-128, 256]).bindPopup('MAX(-128, 256)').addTo(map);
 var popup = L.popup();
 L.marker([-50, 50]).addTo(map).on('click', function (e) {
     popup
-      .setLatLng(e.latlng)
-      .setContent("<p>今ココ！！" + e.latlng.toString())
-      .openOn(map);
+        .setLatLng(e.latlng)
+        .setContent("<p>今ココ！！" + e.latlng.toString())
+        .openOn(map);
 });
 
 // クリックイベント
-map.on('click', function(e) {
+map.on('click', function (e) {
     //クリック位置経緯度取得
     const lat = e.latlng.lat;
     const lng = e.latlng.lng;
     //経緯度表示
     alert("lat: " + lat + ", lng: " + lng);
-} );
+});
 
 L.control.scale({
     imperial: false,
@@ -71,6 +72,7 @@ L.control.scale({
 }).addTo(map);
 
 const path = './data/grid.json';
+// const path = './data/rooms.json';
 const style = {
     color: '#ff00db',
     weight: 1

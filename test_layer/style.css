@@ -1,0 +1,39 @@
+.container {
+    position: relative;
+}
+
+.control {
+    position: relative;
+    top: 300px;
+    left: 20px;
+}
+
+.layer {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.layer1 {
+    background-color: pink;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    opacity: 1;
+}
+
+.layer2 {
+    background-color: powderblue;
+    top: 40px;
+    left: 20px;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.layer3 {
+    background-color: seagreen;
+    top: 70px;
+    left: 30px;
+    z-index: 3;
+    opacity: 1;
+}

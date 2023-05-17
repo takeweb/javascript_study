@@ -1,6 +1,6 @@
 const array = [1, 2, 3];
-undefined
-const doubleArray = array.map(function(value) {
+
+const doubleArray = array.map(function (value) {
     return value * 2;
 });
 
