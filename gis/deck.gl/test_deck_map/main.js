@@ -2,12 +2,6 @@ import { Deck, COORDINATE_SYSTEM, OrthographicView } from '@deck.gl/core/typed';
 import { BitmapLayer, ScatterplotLayer, GeoJsonLayer } from '@deck.gl/layers/typed';
 import { readPixelsToArray } from '@luma.gl/core';
 
-// const INITIAL_VIEW_STATE = {
-//   latitude: 37.8,
-//   longitude: -122.45,
-//   zoom: 15
-// };
-
 const INITIAL_VIEW_STATE = {
   target: [1160, 600, 0],
   zoom: 0,
@@ -18,20 +12,6 @@ const INITIAL_VIEW_STATE = {
 const orthographicView = new OrthographicView({
   flipY: true,
 })
-
-// const INITIAL_VIEW_STATE = {
-//   target: [0, 0, 0],
-//   zoom: 13
-// };
-
-// const INITIAL_VIEW_STATE = {
-//   target: [0, 0, 0],
-// rotationX: 0,
-// rotationOrbit: 0,
-//   minZoom: 0,
-//   maxZoom: 13,
-//   zoom: 13
-// };
 
 const circles = new ScatterplotLayer({
   id: "circle1",
@@ -68,31 +48,6 @@ const circles = new ScatterplotLayer({
       color: [115, 255, 255],
       radius: 30
     },
-    // {
-    //   position: [-122.44, 37.8],
-    //   color: [255, 255, 0],
-    //   radius: 50
-    // },
-    // {
-    //   position: [-122.46, 37.8],
-    //   color: [255, 128, 0],
-    //   radius: 80
-    // },
-    // {
-    //   position: [-122.355, 37.829],
-    //   color: [255, 128, 0],
-    //   radius: 80
-    // },
-    // {
-    //   position: [-122.5190, 37.7045],
-    //   color: [255, 128, 0],
-    //   radius: 80
-    // },
-    // {
-    //   position: [-122.503, 37.7011],
-    //   color: [255, 0, 177],
-    //   radius: 80
-    // }
   ],
   getFillColor: d => d.color,
   getRadius: d => d.radius
@@ -101,10 +56,7 @@ const circles = new ScatterplotLayer({
 const bitmap_layer1 = new BitmapLayer({
   id: 'bitmap-layer1',
   coordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
-  // coordinateOrigin: [0, 0, 0],
   target: [0, 0, 0],
-  // getNormal: [0, 1, 0],
-  // bounds: [-122.5190, 37.7045, -122.400, 37.829],
   bounds: [[0, 1400], [0, 0], [1800, 0], [1800, 1400]],
   image: 'img/map.png',
   pickable: true,
