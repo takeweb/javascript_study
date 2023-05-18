@@ -50,7 +50,7 @@ export function renderLayers() {
         id: 'bitmap-layer1',
         coordinateSystem: COORDINATE_SYSTEM.CARTESIAN,
         target: [0, 0, 0],
-        bounds: [[0, 1400], [0, 0], [1800, 0], [1800, 1400]],
+        bounds: [[0, 1000], [0, 0], [1400, 0], [1400, 1000]],
         image: 'img/map.png',
         pickable: true,
         onClick: ({ bitmap, layer }) => {
