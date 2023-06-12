@@ -1,0 +1,18 @@
+npm init vite@latest
+✔ Project name: … <<対象プロジェクト>>
+✔ Select a framework: › Vanilla
+✔ Select a variant: › JavaScript
+
+cd <<対象プロジェクト>>
+
+npm install
+rm -f main.js
+rm -f counter.js
+rm -f javascript.svg
+rm -f ./public/vite.svg
+rm -f style.css
+
+mkdir script
+cp -f ${HOME}/dev/frontend/javascript_study/00_template/04_template_vite/main.js ./script/
+
+code ./script/main.js
