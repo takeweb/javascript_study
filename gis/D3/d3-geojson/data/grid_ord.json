@@ -1,0 +1,71 @@
+{
+  "type": "GridDefine",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "room_name": "roomA",
+        "color": "yellow"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[0, 0], [100, 0], [100, 50], [0, 50], [0, 0]]
+          ]
+       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "room_name": "roomB",
+        "color": "black"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[100, 0], [200, 0], [200, 50], [100, 50], [100, 0]]
+          ]
+       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "room_name": "roomC",
+        "color": "pink"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[200, 0], [300, 0], [300, 50], [200, 50], [200, 0]]
+          ]
+       }
+    }
+    ,
+    {
+      "type": "Feature",
+      "properties": {
+        "room_name": "roomD",
+        "color": "red"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[0, 50], [100, 50], [100, 100], [0, 100], [0, 50]]
+          ]
+       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "room_name": "roomE",
+        "color": "blue"
+      },
+      "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+            [[100, 50], [200, 50], [200, 100], [100, 100], [100, 50]]
+          ]
+       }
+    }
+  ]
+}

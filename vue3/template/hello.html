@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3.js</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <p v-pre>{{ message }}</p>
+        <p v-text="message"></p>
+        <a v-bind:href='yahoo_url' title='yahoo'>yahooへのリンク</a><br>
+        <a :href="url" title='WINGSプロジェクト'>WINGSプロジェクト</a>
+        <p>{{ 5 + 3 }}</p>
+        <p>{{ value + 2 }}</p>
+        <p>{{ message.substring(1) }}</p>
+        <p>{{ Math.abs(-10) }}</p>
+        <p>{{ localEmail }}</p><!--算出プロパティ-->
+        <p>{{ localEmail2() }}</p><!--メソッド-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.36/dist/vue.global.js"></script>
+    <!-- 本番運用時はこちら -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.2.36/dist/vue.global.prod.js"></script> -->
+    <script src="../js/hello.js"></script>
+</body>
+</html>

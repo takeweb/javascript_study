@@ -15,3 +15,10 @@ const str = "吉野家";
 for (const s of str) {
   console.log(s);
 }
+
+
+const objArray = { a: 1, b: 2, c: 3 };
+
+for (obj in objArray) {
+    console.log(obj);
+}

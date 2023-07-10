@@ -1,0 +1,22 @@
+{
+  "name": "d3-geojson",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "d3": "^7.8.4",
+    "d3-svg-legend": "^2.25.6"
+  }
+}
