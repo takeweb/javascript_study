@@ -1,5 +1,5 @@
 import { COORDINATE_SYSTEM } from '@deck.gl/core/typed';
-import { BitmapLayer, ScatterplotLayer, GeoJsonLayer } from '@deck.gl/layers/typed';
+import { BitmapLayer, GeoJsonLayer, ScatterplotLayer } from '@deck.gl/layers/typed';
 import { readPixelsToArray } from '@luma.gl/core';
 
 export function renderLayers() {
@@ -79,6 +79,10 @@ export function renderLayers() {
         getFillColor: [0, 160, 0, 180],
         getLineColor: [0, 0, 255, 255],
         lineWidthMinPixels: 2,
+        pickable: true,
+        onClick: (item) => {
+          console.log(item.object.properties.room_name)
+        }
     });
 
     // 配列の順でレイヤーの重なり順が変わる(下→中→上)
