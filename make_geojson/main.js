@@ -1,35 +1,45 @@
+import { writeFileSync } from "fs";
+
 function make_geojson(x_len, y_len, one_grid) {
   let main_obj = {
     type: "FeatureCollection",
     features: [],
-  }
-
-
+  };
 
   for (let x = 0; x <= x_len; x++) {
     for (let y = 0; y <= y_len; y++) {
       let sub_obj = {
         type: "Feature",
         properties: {
-          grid_no: (x+1).toString().padStart(3, '0') + "-" + (y+1).toString().padStart(3, '0'),
+          grid_no:
+            (x + 1).toString().padStart(3, "0") +
+            "-" +
+            (y + 1).toString().padStart(3, "0"),
           color: "",
         },
         geometry: {
           type: "Polygon",
-          coordinates: []
-        }
-      }
-      sub_obj.geometry.coordinates.push([x * one_grid, y * one_grid]);
-      sub_obj.geometry.coordinates.push([(x+1) * one_grid, y * one_grid]);
-      sub_obj.geometry.coordinates.push([(x+1) * one_grid, (y+1) * one_grid]);
-      sub_obj.geometry.coordinates.push([x * one_grid, (y+1) * one_grid]);
-      sub_obj.geometry.coordinates.push([x * one_grid, y * one_grid]);
+          coordinates: [],
+        },
+      };
+      let array = [];
+      array.push([x * one_grid, y * one_grid]);
+      array.push([(x + 1) * one_grid, y * one_grid]);
+      array.push([(x + 1) * one_grid, (y + 1) * one_grid]);
+      array.push([x * one_grid, (y + 1) * one_grid]);
+      array.push([x * one_grid, y * one_grid]);
+      sub_obj.geometry.coordinates.push(array);
       // console.log(JSON.stringify(sub_obj));
-      main_obj.features.push({...sub_obj});
+      main_obj.features.push({ ...sub_obj });
     }
   }
-
-  console.log(JSON.stringify(main_obj));
+  console.log(JSON.stringify(main_obj, null, 2));
+  const s = JSON.stringify(main_obj, null, 2);
+  try {
+    writeFileSync("./grids.json", s, "utf-8");
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-make_geojson(3, 3, 20);
+make_geojson(80, 50, 20);
