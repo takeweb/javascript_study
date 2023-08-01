@@ -1,5 +1,7 @@
 import { writeFileSync } from "fs";
 
+make_geojson(80, 50, 20);
+
 function make_geojson(x_len, y_len, one_grid) {
   let main_obj = {
     type: "FeatureCollection",
@@ -19,17 +21,17 @@ function make_geojson(x_len, y_len, one_grid) {
         },
         geometry: {
           type: "Polygon",
-          coordinates: [],
+          coordinates: [
+            [
+              [x * one_grid, y * one_grid],
+              [(x + 1) * one_grid, y * one_grid],
+              [(x + 1) * one_grid, (y + 1) * one_grid],
+              [x * one_grid, (y + 1) * one_grid],
+              [x * one_grid, y * one_grid]
+            ]
+          ],
         },
       };
-      let array = [];
-      array.push([x * one_grid, y * one_grid]);
-      array.push([(x + 1) * one_grid, y * one_grid]);
-      array.push([(x + 1) * one_grid, (y + 1) * one_grid]);
-      array.push([x * one_grid, (y + 1) * one_grid]);
-      array.push([x * one_grid, y * one_grid]);
-      sub_obj.geometry.coordinates.push(array);
-      // console.log(JSON.stringify(sub_obj));
       main_obj.features.push({ ...sub_obj });
     }
   }
@@ -41,5 +43,3 @@ function make_geojson(x_len, y_len, one_grid) {
     console.log(err);
   }
 }
-
-make_geojson(80, 50, 20);
