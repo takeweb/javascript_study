@@ -3,7 +3,7 @@
  */
 class DraggableItem {
   /**
-   * まとめて生成
+   * SVG枠と子要素をまとめて生成
    * @param {object} svg SVG枠オブジェクト
    * @param {object[]} elems 子要素配列
    */
@@ -26,8 +26,8 @@ class DraggableItem {
     this.svg = svg;
     this.svg.addEventListener("mousemove", (e) => this.mouseMove(e), false);
     this.svg.addEventListener("touchmove", (e) => this.mouseMove(e), false);
-    this.svg.addEventListener("mouseup", (e) => this.mouseUp(e), false);
-    this.svg.addEventListener("touchend", (e) => this.mouseUp(e), false);
+    this.svg.addEventListener("mouseup", (_e) => this.mouseUp(), false);
+    this.svg.addEventListener("touchend", (_e) => this.mouseUp(), false);
   }
 
   /**
@@ -40,24 +40,8 @@ class DraggableItem {
     elem.addEventListener("touchstart", (e) => this.mouseDown(e), false);
     elem.addEventListener("mousemove", (e) => this.mouseMove(e), false);
     elem.addEventListener("touchmove", (e) => this.mouseMove(e), false);
-    elem.addEventListener("mouseup", (e) => this.mouseUp(e), false);
-    elem.addEventListener("touchend", (e) => this.mouseUp(e), false);
-  }
-
-  /**
-   * 画面座標をSVG座標に変換
-   * @param {*} svg SVG枠
-   * @param {*} elem 子要素
-   * @param {*} x X座標
-   * @param {*} y Y座標
-   * @returns SVG座標
-   */
-  screenPointToSVGPoint(svg, elem, x, y) {
-    const p = svg.createSVGPoint();
-    p.x = x;
-    p.y = y;
-    const CTM = elem.getScreenCTM();
-    return p.matrixTransform(CTM.inverse());
+    elem.addEventListener("mouseup", (_e) => this.mouseUp(), false);
+    elem.addEventListener("touchend", (_e) => this.mouseUp(), false);
   }
 
   /**
@@ -66,12 +50,10 @@ class DraggableItem {
    * @returns SVG座標
    */
   mousePointToSVGPoint(e) {
-    return this.screenPointToSVGPoint(
-      this.svg,
-      this.dragElem,
-      e.clientX,
-      e.clientY
-    );
+    const p = this.svg.createSVGPoint();
+    p.x = e.clientX;
+    p.y = e.clientY;
+    return p.matrixTransform(this.dragElem.getScreenCTM().inverse());
   }
 
   /**
@@ -118,9 +100,8 @@ class DraggableItem {
 
   /**
    * マウスアップ時処理
-   * @param {object} _e イベントオブジェクト(未使用)
    */
-  mouseUp(_e) {
+  mouseUp() {
     this.dragElem = null;
   }
 }
@@ -194,18 +175,21 @@ function createRect(id, width, height, x, y, fill, targetSvg) {
   return square;
 }
 
+/**
+ * 初期化
+ */
 function init() {
-  const svg1 = createSvg("svg1", 300, 340);
+  const svg1 = createSvg("svg1", 800, 250);
   const ball1 = createCircle("ball1", 100, 100, 20, "blue", svg1);
   const ball2 = createCircle("ball2", 200, 200, 20, "green", svg1);
   DraggableItem.create(svg1, [ball1, ball2]);
 
-  const svg2 = createSvg("svg2", 300, 340);
+  const svg2 = createSvg("svg2", 800, 250);
   const ball3 = createCircle("ball3", 100, 100, 20, "red", svg2);
   const ball4 = createCircle("ball4", 200, 200, 20, "yellow", svg2);
   DraggableItem.create(svg2, [ball3, ball4]);
 
-  const svg3 = createSvg("svg3", 300, 340);
+  const svg3 = createSvg("svg3", 800, 250);
   const ball5 = createCircle("ball5", 200, 200, 20, "orange", svg3);
   const square1 = createRect("squqre1", 140, 140, 75, 10, "pink", svg3);
   DraggableItem.create(svg3, [ball5, square1]);
