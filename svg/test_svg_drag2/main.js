@@ -28,6 +28,7 @@ class DraggableItem {
     this.svg.addEventListener("touchmove", (e) => this.mouseMove(e), false);
     this.svg.addEventListener("mouseup", (_e) => this.mouseUp(), false);
     this.svg.addEventListener("touchend", (_e) => this.mouseUp(), false);
+    this.svg.addEventListener("dblclick", (e) => this.addNewElem(e), false);
   }
 
   /**
@@ -104,6 +105,16 @@ class DraggableItem {
   mouseUp() {
     this.dragElem = null;
   }
+
+  /**
+   * 新しい子要素を追加
+   */
+  addNewElem(e) {
+    const event = e.type === "dblclick" ? e : e.changedTouches[0];
+    // const p = this.mousePointToSVGPoint(event);
+    const c = createCircle(this.svg, "ball10", 300, 200, 20, "green");
+    this.addElem(c);
+  }
 }
 
 /**
@@ -131,38 +142,37 @@ function createSvg(id, width, height) {
 
 /**
  * 円作成
+ * @param {object} targetSvg 追加対象のSVG枠
  * @param {string} id 円のID
  * @param {number} cx 円のX位置
  * @param {number} cy 円のY位置
  * @param {number} r 円の半径
  * @param {string} fill 円の塗りつぶし色
- * @param {object} targetSvg 追加対象のSVG枠
  * @returns 円オブジェクト
  */
-function createCircle(id, cx, cy, r, fill, targetSvg) {
+function createCircle(targetSvg, id, cx, cy, r, fill) {
   const ball = document.createElementNS("http://www.w3.org/2000/svg", "circle");
   ball.setAttribute("id", id);
   ball.setAttribute("cx", cx.toString());
   ball.setAttribute("cy", cy.toString());
   ball.setAttribute("r", r.toString());
   ball.setAttribute("fill", fill);
-
   targetSvg.appendChild(ball);
   return ball;
 }
 
 /**
  * 四角形作成
+ * @param {object} targetSvg 追加対象のSVG枠
  * @param {string} id 四角形のID
  * @param {number} width 四角形の幅
  * @param {number} height 四角形の高さ
  * @param {number} x 四角形のX位置
  * @param {number} y 四角形のY位置
  * @param {string} fill 四角形の塗りつぶし色
- * @param {object} targetSvg 追加対象のSVG枠
  * @returns 円オブジェクト
  */
-function createRect(id, width, height, x, y, fill, targetSvg) {
+function createRect(targetSvg, id, width, height, x, y, fill) {
   const square = document.createElementNS("http://www.w3.org/2000/svg", "rect");
   square.setAttribute("id", id);
   square.setAttribute("width", width.toString());
@@ -170,7 +180,6 @@ function createRect(id, width, height, x, y, fill, targetSvg) {
   square.setAttribute("x", x.toString());
   square.setAttribute("y", y.toString());
   square.setAttribute("fill", fill);
-
   targetSvg.appendChild(square);
   return square;
 }
@@ -180,18 +189,18 @@ function createRect(id, width, height, x, y, fill, targetSvg) {
  */
 function init() {
   const svg1 = createSvg("svg1", 800, 250);
-  const ball1 = createCircle("ball1", 100, 100, 20, "blue", svg1);
-  const ball2 = createCircle("ball2", 200, 200, 20, "green", svg1);
+  const ball1 = createCircle(svg1, "ball1", 100, 100, 20, "blue");
+  const ball2 = createCircle(svg1, "ball2", 200, 200, 20, "green");
   DraggableItem.create(svg1, [ball1, ball2]);
 
   const svg2 = createSvg("svg2", 800, 250);
-  const ball3 = createCircle("ball3", 100, 100, 20, "red", svg2);
-  const ball4 = createCircle("ball4", 200, 200, 20, "yellow", svg2);
+  const ball3 = createCircle(svg2, "ball3", 100, 100, 20, "red");
+  const ball4 = createCircle(svg2, "ball4", 200, 200, 20, "yellow");
   DraggableItem.create(svg2, [ball3, ball4]);
 
   const svg3 = createSvg("svg3", 800, 250);
-  const ball5 = createCircle("ball5", 200, 200, 20, "orange", svg3);
-  const square1 = createRect("squqre1", 140, 140, 75, 10, "pink", svg3);
+  const ball5 = createCircle(svg3, "ball5", 200, 200, 20, "orange");
+  const square1 = createRect(svg3, "squqre1", 140, 140, 75, 10, "pink");
   DraggableItem.create(svg3, [ball5, square1]);
 }
 
