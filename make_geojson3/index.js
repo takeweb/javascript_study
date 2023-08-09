@@ -1,6 +1,6 @@
 import { writeFileSync } from "fs";
 
-make_geojson(80, 50, 20);
+make_geojson(142, 88, 20);
 
 function make_geojson(x_len, y_len, one_grid) {
   let main_obj = {
@@ -16,7 +16,7 @@ function make_geojson(x_len, y_len, one_grid) {
           grid_no:
             (x + 1).toString().padStart(3, "0") +
             "-" +
-            (y - y + 1).toString().padStart(3, "0"),
+            (y_len - y + 1).toString().padStart(3, "0"),
           color: "",
         },
         geometry: {
