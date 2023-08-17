@@ -34,13 +34,11 @@ function makeGeojsonForArea(xLen, yLen, xDiv, yDiv, fileName) {
         geometry: {
           type: "Polygon",
           coordinates: [
-            [
-              [x * xGrid, y * yGrid],
-              [(x + 1) * xGrid, y * yGrid],
-              [(x + 1) * xGrid, (y - 1) * yGrid],
-              [x * xGrid, (y - 1) * yGrid],
-              [x * xGrid, y * yGrid],
-            ],
+            [x * xGrid, y * yGrid],
+            [(x + 1) * xGrid, y * yGrid],
+            [(x + 1) * xGrid, (y - 1) * yGrid],
+            [x * xGrid, (y - 1) * yGrid],
+            [x * xGrid, y * yGrid],
           ],
         },
       };
@@ -52,7 +50,7 @@ function makeGeojsonForArea(xLen, yLen, xDiv, yDiv, fileName) {
   // console.log(jsonStr);
 
   try {
-    writeFileSync("./" + fileName, jsonStr, "utf-8");
+    writeFileSync(`./${fileName}`, jsonStr, "utf-8");
   } catch (err) {
     console.log(err);
   }

@@ -30,13 +30,11 @@ function makeGeojsonForGrid(xLen, yLen, oneGrid, fileName) {
         geometry: {
           type: "Polygon",
           coordinates: [
-            [
-              [x * oneGrid, y * oneGrid],
-              [(x + 1) * oneGrid, y * oneGrid],
-              [(x + 1) * oneGrid, (y - 1) * oneGrid],
-              [x * oneGrid, (y - 1) * oneGrid],
-              [x * oneGrid, y * oneGrid],
-            ],
+            [x * oneGrid, y * oneGrid],
+            [(x + 1) * oneGrid, y * oneGrid],
+            [(x + 1) * oneGrid, (y - 1) * oneGrid],
+            [x * oneGrid, (y - 1) * oneGrid],
+            [x * oneGrid, y * oneGrid],
           ],
         },
       };

@@ -22,13 +22,11 @@ function make_geojson(x_len, y_len, one_grid) {
         geometry: {
           type: "Polygon",
           coordinates: [
-            [
-              [x * one_grid, y * one_grid],
-              [(x + 1) * one_grid, y * one_grid],
-              [(x + 1) * one_grid, (y + 1) * one_grid],
-              [x * one_grid, (y + 1) * one_grid],
-              [x * one_grid, y * one_grid],
-            ],
+            [x * one_grid, y * one_grid],
+            [(x + 1) * one_grid, y * one_grid],
+            [(x + 1) * one_grid, (y + 1) * one_grid],
+            [x * one_grid, (y + 1) * one_grid],
+            [x * one_grid, y * one_grid],
           ],
         },
       };
