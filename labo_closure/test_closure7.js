@@ -1,6 +1,6 @@
 let uniqueInt = () => {
   let counter = 0;
-  return function () {
+  return () => {
     return counter++;
   };
 };
