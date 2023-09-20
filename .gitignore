@@ -6,3 +6,5 @@ gis/leaflet/d3js-sample/
 gis/sample/
 gis/D3/d3js-sample
 gis/deck.gl/deck.gl
+geojson/conv_geojson/W5F.json
+gis/deck.gl/test_deck_map_simple/data/W5F.geojson
