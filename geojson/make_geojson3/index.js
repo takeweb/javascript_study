@@ -1,7 +1,17 @@
 import { writeFileSync } from "fs";
 
+// コマンドライン引数から各パラメータを取得
+const x = process.argv[2];
+const y = process.argv[3];
+const g = process.argv[4];
+// console.log(`x: ${x}`);
+// console.log(`y: ${y}`);
+// console.log(`g: ${g}`);
+
 // グリッド用Geojsonファイル作成実行
-makeGeojsonForGrid(142, 88, 20, "grids.json");
+// makeGeojsonForGrid(142, 88, 20, "grids.json");
+// makeGeojsonForGrid(100, 50, 10, "grids.json");
+makeGeojsonForGrid(x, y, g, "grids_new.json");
 
 /**
  * グリッド用Geojsonファイル作成
@@ -30,11 +40,13 @@ function makeGeojsonForGrid(xLen, yLen, oneGrid, fileName) {
         geometry: {
           type: "Polygon",
           coordinates: [
-            [x * oneGrid, y * oneGrid],
-            [(x + 1) * oneGrid, y * oneGrid],
-            [(x + 1) * oneGrid, (y - 1) * oneGrid],
-            [x * oneGrid, (y - 1) * oneGrid],
-            [x * oneGrid, y * oneGrid],
+            [
+              [x * oneGrid, y * oneGrid],
+              [(x + 1) * oneGrid, y * oneGrid],
+              [(x + 1) * oneGrid, (y - 1) * oneGrid],
+              [x * oneGrid, (y - 1) * oneGrid],
+              [x * oneGrid, y * oneGrid],
+            ],
           ],
         },
       };

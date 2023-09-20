@@ -1,7 +1,14 @@
 import { writeFileSync } from "fs";
 
+// コマンドライン引数から各パラメータを取得
+const arg_x = process.argv[2];
+const arg_y = process.argv[3];
+const arg_x_div = process.argv[4];
+const arg_y_div = process.argv[5];
+
 // エリア用Geojsonファイル作成実行
-makeGeojsonForArea(2840, 1760, 8, 4, "areas.json");
+// makeGeojsonForArea(2840, 1760, 8, 4, "areas.json");
+makeGeojsonForArea(arg_x, arg_y, arg_x_div, arg_y_div, "areas_new.json");
 
 /**
  * エリア用Geojsonファイル作成
@@ -19,6 +26,7 @@ function makeGeojsonForArea(xLen, yLen, xDiv, yDiv, fileName) {
 
   const xGrid = Math.round(xLen / xDiv);
   const yGrid = Math.round(yLen / yDiv);
+  console.log(`xGrid: ${xGrid}、yGrid: ${yGrid}`);
 
   for (let y = yLen; y > 0; y -= yGrid) {
     for (let x = 0; x < xLen; x += xGrid) {
@@ -34,11 +42,13 @@ function makeGeojsonForArea(xLen, yLen, xDiv, yDiv, fileName) {
         geometry: {
           type: "Polygon",
           coordinates: [
-            [x * xGrid, y * yGrid],
-            [(x + 1) * xGrid, y * yGrid],
-            [(x + 1) * xGrid, (y - 1) * yGrid],
-            [x * xGrid, (y - 1) * yGrid],
-            [x * xGrid, y * yGrid],
+            [
+              [x * xGrid, y * yGrid],
+              [(x + 1) * xGrid, y * yGrid],
+              [(x + 1) * xGrid, (y - 1) * yGrid],
+              [x * xGrid, (y - 1) * yGrid],
+              [x * xGrid, y * yGrid],
+            ],
           ],
         },
       };
