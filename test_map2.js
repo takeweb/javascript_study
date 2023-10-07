@@ -1,23 +1,11 @@
-const resultList = [
-    {
-        id: 1,
-        value: 'aaaa'
-    },
-    {
-        id: 2,
-        value: 'bbbb'
-    },
-    {
-        id: 3,
-        value: 'cccc'
-    },
-];
+/**
+ * Map
+ */
 
-const selected = resultList.map(x => {
-    return x.id;
-});
-console.log(selected);
+const map = new Map();
+map.set("key1", "value1");
+map.set("key2", "value2");
 
-
-const selected2 = resultList.map(x => x.id);
-console.log(selected2);
+for (const value in map) {
+  console.log(`value: ${value}`);
+}

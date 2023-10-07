@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="print-btn" type="button">印刷</button>
+  <script>
+    function doPrint(msg, e) {
+        alert(`Print! ${msg}`);
+    }
+
+    window.addEventListener("load", () => {
+      console.log("load")
+      const btn = document.querySelector("#print-btn");
+      btn.addEventListener("click", () => {
+        doPrint("thanks")
+      });
+    })
+    </script>
+</body>
+</html>

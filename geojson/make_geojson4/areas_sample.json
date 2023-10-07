@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "area_no": "001-001",
+        "fill_color": [0, 0, 255, 150]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              423,
+              0
+            ],
+            [
+              423,
+              261
+            ],
+            [
+              0,
+              261
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "area_no": "424-001",
+        "fill_color": [255, 0, 0, 150]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0,
+              261
+            ],
+            [
+              423,
+              261
+            ],
+            [
+              423,
+              522
+            ],
+            [
+              0,
+              522
+            ],
+            [
+              0,
+              261
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "area_no": "001-262",
+        "fill_color": [255, 0, 255, 150]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              423,
+              0
+            ],
+            [
+              846,
+              0
+            ],
+            [
+              846,
+              522
+            ],
+            [
+              423,
+              522
+            ],
+            [
+              423,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "area_no": "424-262",
+        "fill_color": [0, 128, 0, 150]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              423,
+              261
+            ],
+            [
+              846,
+              261
+            ],
+            [
+              846,
+              522
+            ],
+            [
+              423,
+              522
+            ],
+            [
+              423,
+              261
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
