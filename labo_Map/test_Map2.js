@@ -1,3 +1,7 @@
+/**
+ * Map
+ */
+
 const map = new Map();
 console.log(`初期化しただけでは、サイズはゼロ: ${map.size}`);
 map.set("key1", "value1");
