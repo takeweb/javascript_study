@@ -1,18 +1,18 @@
 /**
- * 配列から最大値、最小値を求めたい
+ * 配列から最大値、最小値を求めたい場合、Array.prototype.reduceメソッドが使える
  * 参考: https://qiita.com/ndj/items/82e9c5a4518fe16e539f
  *      https://qiita.com/hachisukansw/items/81d739ef39af343df619
  */
-
-const ary = [5, 2, 3, 1, 10];
+const array = [5, 2, 3, 1, 10];
+console.log(`元の配列: ${JSON.stringify(array)}`);
 
 // 最大値
-const max = ary.reduce((a, b) => {
+const max = array.reduce((a, b) => {
   return Math.max(a, b);
 });
 
 // 最小値
-const min = ary.reduce((a, b) => {
+const min = array.reduce((a, b) => {
   return Math.min(a, b);
 });
 

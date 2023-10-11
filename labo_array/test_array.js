@@ -69,7 +69,7 @@ const colors = [
 
 // Array.prototype.findIndexメソッド---------------------------------------------
 // 要素、インデックス、配列そのものを直接取り出せる
-// 条件に合致した最初の要素だけを抽出した新たな配列を作成できる非破壊メソッド
+// 条件に合致した最初の要素のインデックスを取得できる非破壊メソッド
 const index = colors.findIndex((color, _i, _arr) => {
   return color.name === "blue";
 });
@@ -105,8 +105,15 @@ const ECMAScriptVersion = [
 const versionNames = ECMAScriptVersion.filter((item) => item.year >= 2000).map(
   (item) => item.name
 );
-
 console.log(versionNames);
+
+// これだと、求めている結果にはならない
+const versionNames2 = ECMAScriptVersion.map((item) => {
+  if (item.year >= 2000) {
+    return item.name;
+  }
+});
+console.log(versionNames2);
 
 // Array.prototype.sortメソッド--------------------------------------------------
 // 戻り値がソート済み配列なのに、元の配列にも影響がある破壊的メソッド
