@@ -17,3 +17,5 @@ const index = colors.findIndex((color, _i, _arr) => {
 
 console.log(`インデックス: ${index}`);
 console.log(`インデックスで要素: ${JSON.stringify(colors[index], null, 2)}`);
+
+export default {};

@@ -32,3 +32,5 @@ console.log(`フラット化後の配列(3階層指定): ${result3}`);
 const result4 = array.flat(4);
 // コンソール出力結果: [ 1, 2, 3, 4 ]
 console.log(`フラット化後の配列(4階層指定): ${result4}`);
+
+export default {};

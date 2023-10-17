@@ -13,3 +13,5 @@ console.log(p, r);
 
 const [one, ...rest] = list;
 console.log(one, rest);
+
+export default {};

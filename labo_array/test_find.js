@@ -16,3 +16,5 @@ const result = colors.find((color, _i, _arr) => {
   return color.name === "green";
 });
 console.log(`取得した要素: ${JSON.stringify(result, null, 2)}`);
+
+export default {};

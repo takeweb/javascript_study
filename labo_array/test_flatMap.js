@@ -8,3 +8,5 @@ console.log(`元の配列: ${phrases}`);
 
 let words = phrases.flatMap((phrase) => phrase.split(" "));
 console.log(`フラット化後の配列: ${words}`);
+
+export default {};

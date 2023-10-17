@@ -13,3 +13,5 @@ console.log(`全ての要素の中で１つでも偶数があれば、${result1}
 // 配列要素で数値以外のものがないので、false
 const result2 = array.some((x) => isNaN(x));
 console.log(`全ての要素の中で１つも数値以外がないので、${result2}`);
+
+export default {};

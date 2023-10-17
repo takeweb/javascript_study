@@ -12,3 +12,5 @@ console.log(`元の配列: ${JSON.stringify(num_array)}`);
 const result = num_array.reverse();
 console.log(`ソート後の戻り値: ${JSON.stringify(result)}`);
 console.log(`元の配列も影響を受ける: ${JSON.stringify(num_array)}`);
+
+export default {};

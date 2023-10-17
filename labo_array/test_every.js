@@ -13,3 +13,5 @@ console.log(`全ての要素が10より小さいので、${result1}`);
 // 配列要素全てが偶数ではないので、false
 const result2 = array.every((x) => x % 2 === 0);
 console.log(`全ての要素が偶数なので、${result2}`);
+
+export default {};

@@ -59,3 +59,5 @@ const result5 = num_array5.sort((a, b) => b - a);
 
 console.log(`ソート後の戻り値: ${JSON.stringify(result5)}`);
 console.log(`元の配列: ${JSON.stringify(num_array5)}`);
+
+export default {};

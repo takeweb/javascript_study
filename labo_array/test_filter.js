@@ -12,3 +12,5 @@ const newArray = array.filter((v, _i, _arr) => {
   return v % 2 === 1;
 });
 console.log(`基数のみを抽出: ${JSON.stringify(newArray)}`);
+
+export default {};

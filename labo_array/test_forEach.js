@@ -13,3 +13,5 @@ const array = [1, 2, 3, 4, 5];
 array.forEach((v, i, arr) => {
   console.log(`要素: ${v}、インデックス: ${i}、配列アクセス: ${arr[i]}`);
 });
+
+export default {};

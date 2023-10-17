@@ -10,3 +10,5 @@ const newArray = array.map((v, _i, _arr) => {
 });
 
 console.log(JSON.stringify(newArray));
+
+export default {};

@@ -187,3 +187,5 @@ console.log(`元の配列: ${JSON.stringify(num_array6)}`);
 const result8 = num_array6.reverse();
 console.log(`ソート後の戻り値: ${JSON.stringify(result8)}`);
 console.log(`元の配列: ${JSON.stringify(num_array6)}`);
+
+export default {};
