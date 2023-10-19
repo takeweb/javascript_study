@@ -19,4 +19,8 @@ const min = array.reduce((a, b) => {
 console.log(`最大値: ${max}`); // => 10
 console.log(`最小値: ${min}`); // => 1
 
+// というか、これで良くない？
+console.log(`最大値(Math.max): ${Math.max(...array)}`); // => 10
+console.log(`最小値(Math.min): ${Math.min(...array)}`); // => 1
+
 export default {};

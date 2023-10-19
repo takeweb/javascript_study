@@ -1,0 +1,12 @@
+{
+  "name": "labo_number_math",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test_n_ary_number.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
