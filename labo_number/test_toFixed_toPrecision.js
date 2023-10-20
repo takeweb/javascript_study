@@ -1,5 +1,6 @@
 /**
  * 任意の桁数で小数点を丸める
+ * 種類: インスタンスメソッド
  * Number.prototype.toFixed:     小数点以下が指定された桁数になるように丸める
  * Number.prototype.toPrecision: 数値全体が指定された桁数になるように丸める
  *
