@@ -4,7 +4,6 @@
  * Math.min():  最大値を求める
  * Math.max():  最小値を求める
  * Math.sign(): 符号を判定(正の場合は1、負の場合は0)
- * Math.PI:
  *
  * https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/min
  * https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/max
