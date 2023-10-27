@@ -5,19 +5,20 @@
  *
  * https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
  */
-const words = "!@#$%^&()*-_=+|`~[]:;\"',<.>/?";
-const charArray = [...words];
+// const symbols = "!@#$%^&()*-_=+|`~[]:;\"',<.>/?";
+const symbols = "!#$%&";
+const charArray = [...symbols];
 const charMap = new Map();
 
 charArray.sort();
+console.log(charArray.length);
 console.log(charArray);
-charArray.forEach((_value, index, array) => {
-  charMap.set(
-    array.toString().charAt(index),
-    array.toString().charCodeAt(index)
-  );
+charArray.forEach((value, index, array) => {
+  console.log(value);
+  charMap.set(array.toString().charCodeAt(index).toString(16).padStart(4, "0").toUpperCase(), array.toString().charAt(index));
 });
 
+console.log(charMap);
 charMap.forEach((value, key) => {
   console.log(`${key}の文字コード: ${value}`);
 });
