@@ -38,3 +38,5 @@ const edited = objList
     return `id:${obj.id}-value:${obj.value}`;
   });
 console.log(edited);
+
+export default {};

@@ -16,3 +16,5 @@ const versionNames = ECMAScriptVersion.filter((item) => item.year >= 2000).map(
 );
 
 console.log(versionNames);
+
+export default {};
